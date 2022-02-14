@@ -30,7 +30,7 @@ fun retrofit(
     okHttpClient: OkHttpClient
 ): Retrofit =
     Retrofit.Builder()
-        .baseUrl(BuildConfig.BASE_URL)
+        .baseUrl(BuildConfig.BASE_URL_ALBUM)
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()

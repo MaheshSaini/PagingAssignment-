@@ -1,6 +1,8 @@
 package com.backbase.assignment.ui.data.api
 
 import com.backbase.assignment.ui.data.model.MovieList
+import com.backbase.assignment.ui.data.model.albums.AlbumsResponse
+import com.backbase.assignment.ui.data.model.albums.PhotosResponse
 import com.backbase.assignment.ui.data.model.movie.MovieDetails
 import com.backbase.assignment.ui.network.response.MovieListResponse
 import retrofit2.Response
@@ -35,4 +37,9 @@ interface TMDBService {
         @Query("api_key") apiKey: String?,
         @Query("page") page: Int
     ): Response<MovieListResponse>
+
+    @GET("albums")
+    suspend fun getAlbumsData(): Response<AlbumsResponse>
+    @GET("photos")
+    suspend fun getPhotoData(): Response<PhotosResponse>
 }

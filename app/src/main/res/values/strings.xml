@@ -7,5 +7,6 @@
     <string name="adventure">ADVENTURE</string>
     <string name="science_fication">SCIENCE FICTION</string>
     <string name="action">ACTION</string>
+    <string name="albums">Albums</string>
 
 </resources>

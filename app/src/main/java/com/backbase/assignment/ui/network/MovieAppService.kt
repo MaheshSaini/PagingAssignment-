@@ -4,6 +4,8 @@ import com.backbase.assignment.BuildConfig
 import com.backbase.assignment.ui.data.api.TMDBService
 import com.backbase.assignment.ui.data.model.MovieList
 import com.backbase.assignment.ui.data.model.MovieResult
+import com.backbase.assignment.ui.data.model.albums.AlbumsResponse
+import com.backbase.assignment.ui.data.model.albums.PhotosResponse
 import com.backbase.assignment.ui.data.model.movie.Movie
 import com.backbase.assignment.ui.data.model.movie.MovieDetails
 import com.backbase.assignment.ui.network.response.MovieListResponse
@@ -35,6 +37,18 @@ class MovieAppService(private val api: TMDBService) : BaseService() {
                 movieID,
                 BuildConfig.API_KEY
             )
+        }
+    }
+
+    suspend fun getAlbumsData(): MovieResult<AlbumsResponse> {
+        return createCall {
+            api.getAlbumsData()
+        }
+    }
+
+    suspend fun getPhotoData(): MovieResult<PhotosResponse> {
+        return createCall {
+            api.getPhotoData()
         }
     }
 }
