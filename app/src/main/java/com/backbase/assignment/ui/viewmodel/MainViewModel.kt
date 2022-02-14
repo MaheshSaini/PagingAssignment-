@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.map
 
 class MainViewModel(val repository: Repository) : ViewModel() {
 
-
     val movies: Flow<PagingData<MovieModel>> = getMovieListStream()
         .map { pagingData -> pagingData.map { MovieModel.MovieItem(it) } }
         .map {

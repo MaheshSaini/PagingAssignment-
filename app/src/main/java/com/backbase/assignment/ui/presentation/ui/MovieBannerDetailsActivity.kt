@@ -1,4 +1,5 @@
 package com.backbase.assignment.ui.presentation.ui
+
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,7 @@ class MovieBannerDetailsActivity : AppCompatActivity() {
 
 
     }
+
     private fun getBannerDetails(movieId: Int) {
         lifecycleScope.launch {
             mainBinding.movieProgressBar.visibility = View.VISIBLE
